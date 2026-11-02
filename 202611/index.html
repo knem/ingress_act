@@ -10,7 +10,8 @@ body{background:var(--bg);color:var(--fg);font-family:system-ui,"Noto Sans TC","
 body.wide{max-width:1400px}
 h1,h2,h3{line-height:1.3;margin-top:1.8em}
 h1{color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:.3em}
-h2{border-bottom:1px solid var(--line);padding-bottom:.2em;scroll-margin-top:64px}
+h2{border-bottom:1px solid var(--line);padding-bottom:.2em}
+h1,h2{scroll-margin-top:64px}
 h2 .tag{display:inline-block;background:var(--accent);color:#fff;border-radius:4px;padding:0 .4em;font-size:.8em;vertical-align:.1em}
 img{max-width:100%;height:auto;border-radius:6px}
 a{color:var(--accent);word-break:break-all}
@@ -45,20 +46,39 @@ table.progress thead th{background:var(--card)}
 table.progress th a{text-decoration:none}
 table.progress .agent{position:sticky;left:0;background:var(--card);text-align:left;z-index:1}
 table.progress td.num{font-weight:700}
+.toc{margin-top:12px;border:1px solid var(--line);border-radius:6px;padding:4px 8px}
+.toc summary{cursor:pointer;font-weight:700}
+.toc ul{list-style:none;margin:0;padding:0 0 8px;font-size:.88em;line-height:1.5}
+.toc a{display:block;padding:3px 8px;border-radius:4px;color:var(--fg);text-decoration:none;word-break:normal}
+.toc a:hover{background:var(--card)}
+.toc .toc-1{margin-top:.6em}
+.toc .toc-1 a{color:var(--accent);font-weight:700}
+.toc .toc-2 a{padding-left:18px}
+.toc .tag{color:var(--accent);font-weight:700}
+.toc a.active,.toc a.active .tag{background:var(--accent);color:#fff}
+@media (min-width:1100px){
+  body:not(.wide){max-width:1120px}
+  .layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px}
+  body.wide .layout{display:block}
+  .toc{position:sticky;top:64px;align-self:start;max-height:calc(100vh - 76px);overflow:auto;border:0;padding:0}
+  .toc summary{display:none}
+}
 [hidden]{display:none!important}
 </style></head>
 <body>
 <nav class="tabs" role="tablist">
 <button role="tab" data-tab="doc">活動說明</button>
 <button role="tab" data-tab="progress">探員進度</button>
-<span class="stamp muted">最後更新時間：20261102 23:49:51</span>
+<span class="stamp muted">最後更新時間：20261103 00:23:17</span>
 <span class="tools" data-for="doc"><button id="expand">全部展開</button><button id="collapse">全部收合</button></span>
 </nav>
+<div class="layout">
+<aside class="toc" data-for="doc"><details open><summary>目錄</summary><ul><li class="toc-1"><a href="#s-1">活動</a></li><li class="toc-2"><a href="#s-2">活動概要</a></li><li class="toc-2"><a href="#s-3">規則</a></li><li class="toc-2"><a href="#s-4">交件方式</a></li><li class="toc-2"><a href="#s-5">故事的起源</a></li><li class="toc-1"><a href="#s-6">新手任務</a></li><li class="toc-2"><a href="#t-新手1"><span class="tag">新手#1</span> IITC - app</a></li><li class="toc-2"><a href="#t-新手2"><span class="tag">新手#2</span> IITC - player tracker</a></li><li class="toc-2"><a href="#t-新手3"><span class="tag">新手#3</span> 守護成就</a></li><li class="toc-2"><a href="#t-新手4"><span class="tag">新手#4</span> 解一個城市組圖</a></li><li class="toc-2"><a href="#t-新手5"><span class="tag">新手#5</span> 戰神第一步 - 爆破</a></li><li class="toc-2"><a href="#t-新手6"><span class="tag">新手#6</span> 農 key</a></li><li class="toc-2"><a href="#t-新手7"><span class="tag">新手#7</span> CF 蓋場</a></li><li class="toc-2"><a href="#t-新手8"><span class="tag">新手#8</span> linker 挑戰</a></li><li class="toc-2"><a href="#t-新手9"><span class="tag">新手#9</span> 多重</a></li><li class="toc-2"><a href="#t-新手10"><span class="tag">新手#10</span> 開農團</a></li><li class="toc-1"><a href="#s-17">老手任務</a></li><li class="toc-2"><a href="#t-老手1"><span class="tag">老手#1</span> 記憶中的地點1</a></li><li class="toc-2"><a href="#t-老手2"><span class="tag">老手#2</span> 記憶中的地點2</a></li><li class="toc-2"><a href="#t-老手3"><span class="tag">老手#3</span> 記憶中的地點3</a></li><li class="toc-2"><a href="#t-老手4"><span class="tag">老手#4</span> 記憶中的地點4</a></li><li class="toc-2"><a href="#t-老手5"><span class="tag">老手#5</span> 記憶中的地點5</a></li><li class="toc-2"><a href="#t-老手6"><span class="tag">老手#6</span> 解碼</a></li><li class="toc-2"><a href="#t-老手7"><span class="tag">老手#7</span> 地繪</a></li><li class="toc-2"><a href="#t-老手8"><span class="tag">老手#8</span> 戰神第二步 - 大包</a></li><li class="toc-2"><a href="#t-老手9"><span class="tag">老手#9</span> 戰神第三步 - 戰車團</a></li><li class="toc-2"><a href="#t-老手10"><span class="tag">老手#10</span> 戰神第四步 - 車農團</a></li><li class="toc-1"><a href="#s-28">結語</a></li></ul></details></aside>
 <main id="tab-doc" role="tabpanel">
 <p>202611 台中活動 - 探員日常</p>
 <p><img alt="" src="ref/img/image34.png" /></p>
-<h1>活動</h1>
-<h2>活動概要</h2>
+<h1 id="s-1">活動</h1>
+<h2 id="s-2">活動概要</h2>
 <ul>
 <li>主題：探員日常</li>
 <li>期間：11/1（日）00:00 – 11/30（一）23:59</li>
@@ -72,20 +92,20 @@ table.progress td.num{font-weight:700}
 (以下是示意圖，僅供參考)<br />
 <img alt="" src="ref/img/image1.png" /></li>
 </ul>
-<h2>規則</h2>
+<h2 id="s-3">規則</h2>
 <ul>
 <li>注意交通安全，不要邊騎車邊玩</li>
 <li>解碼題可以討論方法，但不可以直接公開答案</li>
 <li>各題的驗證方式以主辦的判定為準</li>
 </ul>
-<h2>交件方式</h2>
+<h2 id="s-4">交件方式</h2>
 <ul>
 <li><a href="https://forms.gle/UYeXjjSCsiJRkoLK6">https://forms.gle/UYeXjjSCsiJRkoLK6</a></li>
 <li>每完成一題就交一題，寫上「探員名稱＋題號＋截圖或答案」</li>
 <li>截圖盡量能辨識參與者的存在</li>
 <li>以主辦收到的時間為準</li>
 </ul>
-<h2>故事的起源</h2>
+<h2 id="s-5">故事的起源</h2>
 <p>小明是剛升上 8 等的綠軍小萌新。<br />
 某天在公園，一位陌生人朝他走來，亮出手機上熟悉的遊戲畫面。</p>
 <p>陌生人：「你也玩 Ingress 吧？我也是！我叫小黑。」<br />
@@ -99,7 +119,7 @@ table.progress td.num{font-weight:700}
 小黑：「慢慢摸索各種道具的用法，進攻和防守都有學問。」<br />
 小黑：「等你熟悉各種活動，也會成為像我一樣的老手！」</p>
 <p>小黑：「想當年，我還是小萌新的時候……」</p>
-<h1>新手任務</h1>
+<h1 id="s-6">新手任務</h1>
 <h2 id="t-新手1"><span class="tag">新手#1</span> IITC - app</h2>
 <details class="sec sec-story" data-key="新手#1:緣起" open><summary>緣起</summary><div class="sec-body"><p>老探員之間流傳一句話：「只看掃描器的是新人，會看 IITC 的是老手。」<br />
 掃描器只照得到腳邊幾百公尺，IITC 卻能把整座城市攤在眼前。哪裡被藍軍染色、哪座塔剛被打白、誰的線正從遠方拉過來，全都看得一清二楚。<br />
@@ -235,7 +255,7 @@ https://comic.acgn.cc/view-215393.htm<br />
 </ul>
 <p>Ex: 圈十<br />
 <img alt="" src="ref/img/image25.png" /></p></div></details>
-<h1>老手任務</h1>
+<h1 id="s-17">老手任務</h1>
 <h2 id="t-老手1"><span class="tag">老手#1</span> 記憶中的地點1</h2>
 <details class="sec sec-story" data-key="老手#1:緣起" open><summary>緣起</summary><div class="sec-body"><p>「還記得... 很久很久之前的世界碎片戰.......」</p>
 <p>活動前幾天，官方搶先公布了幾十張神秘照片，宣布說這些地點即將成為活動的碎片出生點<br />
@@ -365,7 +385,7 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
 <details class="sec sec-hint" data-key="老手#10:提示" open><summary>提示</summary><div class="sec-body"><ul>
 <li>圈五、七塔、R農以上的團，稱為農團</li>
 </ul></div></details>
-<h1>結語</h1>
+<h1 id="s-28">結語</h1>
 <p>遊戲的互動方式有很多種，<br />
 - 有的人喜歡成為戰神玩家<br />
 - 有的人喜歡當物資農夫<br />
@@ -378,8 +398,9 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
 </main>
 <main id="tab-progress" role="tabpanel" hidden>
 <h1>探員進度</h1>
-<div class="legend"><span class="chip st-submit">交件</span><span class="chip st-reject">不符合</span><span class="chip st-done">完成</span><span class="muted">資料更新：2026-11-02 23:12</span></div><div class="table-wrap"><table class="progress"><thead><tr><th class="agent">探員</th><th>完成</th><th>獎牌</th><th><a href="#t-新手1" data-tab-link="doc" title="新手#1 IITC - app">新1</a></th><th><a href="#t-新手2" data-tab-link="doc" title="新手#2 IITC - player tracker">新2</a></th><th><a href="#t-新手3" data-tab-link="doc" title="新手#3 守護成就">新3</a></th><th><a href="#t-新手4" data-tab-link="doc" title="新手#4 解一個城市組圖">新4</a></th><th><a href="#t-新手5" data-tab-link="doc" title="新手#5 戰神第一步 - 爆破">新5</a></th><th><a href="#t-新手6" data-tab-link="doc" title="新手#6 農 key">新6</a></th><th><a href="#t-新手7" data-tab-link="doc" title="新手#7 CF 蓋場">新7</a></th><th><a href="#t-新手8" data-tab-link="doc" title="新手#8 linker 挑戰">新8</a></th><th><a href="#t-新手9" data-tab-link="doc" title="新手#9 多重">新9</a></th><th><a href="#t-新手10" data-tab-link="doc" title="新手#10 開農團">新10</a></th><th><a href="#t-老手1" data-tab-link="doc" title="老手#1 記憶中的地點1">老1</a></th><th><a href="#t-老手2" data-tab-link="doc" title="老手#2 記憶中的地點2">老2</a></th><th><a href="#t-老手3" data-tab-link="doc" title="老手#3 記憶中的地點3">老3</a></th><th><a href="#t-老手4" data-tab-link="doc" title="老手#4 記憶中的地點4">老4</a></th><th><a href="#t-老手5" data-tab-link="doc" title="老手#5 記憶中的地點5">老5</a></th><th><a href="#t-老手6" data-tab-link="doc" title="老手#6 解碼">老6</a></th><th><a href="#t-老手7" data-tab-link="doc" title="老手#7 地繪">老7</a></th><th><a href="#t-老手8" data-tab-link="doc" title="老手#8 戰神第二步 - 大包">老8</a></th><th><a href="#t-老手9" data-tab-link="doc" title="老手#9 戰神第三步 - 戰車團">老9</a></th><th><a href="#t-老手10" data-tab-link="doc" title="老手#10 戰神第四步 - 車農團">老10</a></th></tr></thead><tbody><tr><th class="agent">namie1229</th><td class="num">3</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-01 23:11">11/1</td><td class="st-done" title="新手#2 完成 2026-11-01 23:13">11/1</td><td class="st-done" title="新手#3 完成 2026-11-01 23:20">11/1</td><td title="新手#4"></td><td class="st-submit" title="新手#5 交件 2026-11-01 23:23">交件</td><td class="st-submit" title="新手#6 交件 2026-11-01 23:28">交件</td><td class="st-submit" title="新手#7 交件 2026-11-01 23:30">交件</td><td class="st-submit" title="新手#8 交件 2026-11-01 23:33">交件</td><td class="st-submit" title="新手#9 交件 2026-11-01 23:35">交件</td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">ZoltraakIX</th><td class="num">2</td><td class="medal"></td><td title="新手#1"></td><td title="新手#2"></td><td class="st-done" title="新手#3 完成 2026-11-01 22:12">11/1</td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td class="st-done" title="老手#6 完成 2026-11-01 05:00">11/1</td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">cby56</th><td class="num">1</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-01 22:55">11/1</td><td title="新手#2"></td><td title="新手#3"></td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">EvenChen</th><td class="num">0</td><td class="medal"></td><td class="st-submit" title="新手#1 交件 2026-11-02 01:12">交件</td><td title="新手#2"></td><td title="新手#3"></td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td class="st-submit" title="老手#6 交件 2026-11-02 01:15">交件</td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">Nonstopaaa</th><td class="num">0</td><td class="medal"></td><td class="st-submit" title="新手#1 交件 2026-11-01 23:40">交件</td><td class="st-submit" title="新手#2 交件 2026-11-01 23:41">交件</td><td class="st-submit" title="新手#3 交件 2026-11-01 23:41">交件</td><td class="st-submit" title="新手#4 交件 2026-11-01 23:42">交件</td><td class="st-submit" title="新手#5 交件 2026-11-01 23:42">交件</td><td class="st-submit" title="新手#6 交件 2026-11-01 23:43">交件</td><td title="新手#7"></td><td class="st-submit" title="新手#8 交件 2026-11-01 23:43">交件</td><td class="st-submit" title="新手#9 交件 2026-11-01 23:44">交件</td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr></tbody></table></div><p class="muted">表頭「新1」＝新手#1、「老1」＝老手#1，點表頭可跳到該任務說明。完成格顯示交件日期。</p>
+<div class="legend"><span class="chip st-submit">交件</span><span class="chip st-reject">不符合</span><span class="chip st-done">完成</span><span class="muted">資料更新：2026-11-03 00:20</span></div><div class="table-wrap"><table class="progress"><thead><tr><th class="agent">探員</th><th>完成</th><th>獎牌</th><th><a href="#t-新手1" data-tab-link="doc" title="新手#1 IITC - app">新1</a></th><th><a href="#t-新手2" data-tab-link="doc" title="新手#2 IITC - player tracker">新2</a></th><th><a href="#t-新手3" data-tab-link="doc" title="新手#3 守護成就">新3</a></th><th><a href="#t-新手4" data-tab-link="doc" title="新手#4 解一個城市組圖">新4</a></th><th><a href="#t-新手5" data-tab-link="doc" title="新手#5 戰神第一步 - 爆破">新5</a></th><th><a href="#t-新手6" data-tab-link="doc" title="新手#6 農 key">新6</a></th><th><a href="#t-新手7" data-tab-link="doc" title="新手#7 CF 蓋場">新7</a></th><th><a href="#t-新手8" data-tab-link="doc" title="新手#8 linker 挑戰">新8</a></th><th><a href="#t-新手9" data-tab-link="doc" title="新手#9 多重">新9</a></th><th><a href="#t-新手10" data-tab-link="doc" title="新手#10 開農團">新10</a></th><th><a href="#t-老手1" data-tab-link="doc" title="老手#1 記憶中的地點1">老1</a></th><th><a href="#t-老手2" data-tab-link="doc" title="老手#2 記憶中的地點2">老2</a></th><th><a href="#t-老手3" data-tab-link="doc" title="老手#3 記憶中的地點3">老3</a></th><th><a href="#t-老手4" data-tab-link="doc" title="老手#4 記憶中的地點4">老4</a></th><th><a href="#t-老手5" data-tab-link="doc" title="老手#5 記憶中的地點5">老5</a></th><th><a href="#t-老手6" data-tab-link="doc" title="老手#6 解碼">老6</a></th><th><a href="#t-老手7" data-tab-link="doc" title="老手#7 地繪">老7</a></th><th><a href="#t-老手8" data-tab-link="doc" title="老手#8 戰神第二步 - 大包">老8</a></th><th><a href="#t-老手9" data-tab-link="doc" title="老手#9 戰神第三步 - 戰車團">老9</a></th><th><a href="#t-老手10" data-tab-link="doc" title="老手#10 戰神第四步 - 車農團">老10</a></th></tr></thead><tbody><tr><th class="agent">Nonstopaaa</th><td class="num">10</td><td class="medal">銅牌</td><td class="st-done" title="新手#1 完成 2026-11-01 23:40">11/1</td><td class="st-done" title="新手#2 完成 2026-11-01 23:41">11/1</td><td class="st-done" title="新手#3 完成 2026-11-01 23:41">11/1</td><td class="st-done" title="新手#4 完成 2026-11-01 23:42">11/1</td><td class="st-done" title="新手#5 完成 2026-11-01 23:42">11/1</td><td class="st-done" title="新手#6 完成 2026-11-01 23:43">11/1</td><td class="st-done" title="新手#7 完成 2026-11-02 23:25">11/2</td><td class="st-done" title="新手#8 完成 2026-11-01 23:43">11/1</td><td class="st-done" title="新手#9 完成 2026-11-01 23:44">11/1</td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td class="st-done" title="老手#8 完成 2026-11-02 23:28">11/2</td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">namie1229</th><td class="num">8</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-01 23:11">11/1</td><td class="st-done" title="新手#2 完成 2026-11-01 23:13">11/1</td><td class="st-done" title="新手#3 完成 2026-11-01 23:20">11/1</td><td title="新手#4"></td><td class="st-done" title="新手#5 完成 2026-11-01 23:23">11/1</td><td class="st-done" title="新手#6 完成 2026-11-01 23:28">11/1</td><td class="st-done" title="新手#7 完成 2026-11-01 23:30">11/1</td><td class="st-done" title="新手#8 完成 2026-11-01 23:33">11/1</td><td class="st-done" title="新手#9 完成 2026-11-01 23:35">11/1</td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">EvenChen</th><td class="num">2</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-02 01:12">11/2</td><td title="新手#2"></td><td title="新手#3"></td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td class="st-done" title="老手#6 完成 2026-11-02 01:15">11/2</td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">ZoltraakIX</th><td class="num">2</td><td class="medal"></td><td title="新手#1"></td><td title="新手#2"></td><td class="st-done" title="新手#3 完成 2026-11-01 22:12">11/1</td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td class="st-done" title="老手#6 完成 2026-11-01 05:00">11/1</td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">cby56</th><td class="num">1</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-01 22:55">11/1</td><td title="新手#2"></td><td title="新手#3"></td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr><tr><th class="agent">Sallychen</th><td class="num">1</td><td class="medal"></td><td class="st-done" title="新手#1 完成 2026-11-02 23:34">11/2</td><td title="新手#2"></td><td title="新手#3"></td><td title="新手#4"></td><td title="新手#5"></td><td title="新手#6"></td><td title="新手#7"></td><td title="新手#8"></td><td title="新手#9"></td><td title="新手#10"></td><td title="老手#1"></td><td title="老手#2"></td><td title="老手#3"></td><td title="老手#4"></td><td title="老手#5"></td><td title="老手#6"></td><td title="老手#7"></td><td title="老手#8"></td><td title="老手#9"></td><td title="老手#10"></td></tr></tbody></table></div><p class="muted">表頭「新1」＝新手#1、「老1」＝老手#1，點表頭可跳到該任務說明。完成格顯示交件日期。</p>
 </main>
+</div>
 <script>
 (function(){
   var NS='ingress202611:';
@@ -413,10 +434,38 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
     });
   });
 
+  // 目錄：寬螢幕固定在左側；窄螢幕收在頂端，點選後自動收起
+  var toc=document.querySelector('.toc details');
+  var wideMq=window.matchMedia('(min-width:1100px)');
+  function tocMode(){toc.open=wideMq.matches;}
+  tocMode();
+  if(wideMq.addEventListener) wideMq.addEventListener('change',tocMode);
+  toc.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){if(!wideMq.matches) toc.open=false;});
+  });
+  var links={};
+  toc.querySelectorAll('a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var cur=null;
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(!e.isIntersecting||!links[e.target.id]) return;
+        if(cur) cur.classList.remove('active');
+        cur=links[e.target.id];
+        cur.classList.add('active');
+        // 只捲動目錄本身，不動到頁面
+        var box=toc.parentNode;
+        if(wideMq.matches&&(cur.offsetTop<box.scrollTop||cur.offsetTop>box.scrollTop+box.clientHeight-30))
+          box.scrollTop=cur.offsetTop-box.clientHeight/3;
+      });
+    },{rootMargin:'-64px 0px -70% 0px'});
+    document.querySelectorAll('#tab-doc h1[id],#tab-doc h2[id]').forEach(function(h){io.observe(h);});
+  }
+
   function show(tab){
     document.querySelectorAll('[data-tab]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.tab===tab);});
     document.querySelectorAll('[role=tabpanel]').forEach(function(p){p.hidden=p.id!=='tab-'+tab;});
-    document.querySelectorAll('.tools').forEach(function(t){t.hidden=t.dataset.for!==tab;});
+    document.querySelectorAll('[data-for]').forEach(function(t){t.hidden=t.dataset.for!==tab;});
     document.body.classList.toggle('wide',tab==='progress');
     set('tab',tab);
   }
