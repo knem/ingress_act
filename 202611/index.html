@@ -26,6 +26,9 @@ nav.tabs .tools{margin-left:auto;display:flex;gap:4px}
 nav.tabs .tools button{font-size:.85em;padding:2px 10px}
 .sec{margin:.8em 0;border-left:3px solid var(--line);padding-left:12px}
 .sec-task{border-left-color:var(--accent)}
+.sec-hint{border-left-color:var(--submit)}
+body.hide-hints .sec-hint{display:none}
+nav.tabs .tools button[aria-pressed=true]{background:var(--submit);border-color:var(--submit);color:#fff}
 .sec-label,.sec summary{font-weight:700}
 .sec summary{cursor:pointer;user-select:none}
 .sec summary::marker{color:var(--accent)}
@@ -49,7 +52,7 @@ table.progress td.num{font-weight:700}
 <nav class="tabs" role="tablist">
 <button role="tab" data-tab="doc">活動說明</button>
 <button role="tab" data-tab="progress">探員進度</button>
-<span class="tools" data-for="doc"><button id="expand">全部展開</button><button id="collapse">全部收合</button></span>
+<span class="tools" data-for="doc"><button id="expand">緣起全展開</button><button id="collapse">緣起全收合</button><button id="hints">提示</button></span>
 </nav>
 <main id="tab-doc" role="tabpanel">
 <p>202611 台中活動 - 探員日常</p>
@@ -103,7 +106,7 @@ table.progress td.num{font-weight:700}
 據說每個老手第一次打開 IITC 的那天晚上，都滑著地圖捨不得睡...<br />
 <img alt="" src="ref/img/image5.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>安裝 IITC（手機 app 或瀏覽器外掛），截一張 IITC 呈現的地圖畫面</p></div></div>
-<details class="sec sec-toggle" data-key="新手#1:提示" open><summary>提示</summary><div class="sec-body"><p>Ex: 安卓手機 app - IITC-CE行動版<br />
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><p>Ex: 安卓手機 app - IITC-CE行動版<br />
 <a href="https://play.google.com/store/apps/details?id=org.exarhteam.iitc_mobile">https://play.google.com/store/apps/details?id=org.exarhteam.iitc_mobile</a><br />
 <img alt="" src="ref/img/image32.png" /></p>
 <p>Ex: 蘋果手機 app - IITC-CE行動版<br />
@@ -111,7 +114,7 @@ table.progress td.num{font-weight:700}
 <img alt="" src="ref/img/image33.png" /></p>
 <p>Ex: Chrome 瀏覽器的擴充功能 - IITC button<br />
 <a href="https://chromewebstore.google.com/detail/iitc-button/febaefghpimpenpigafpolgljcfkeakn?hl=zh-tw">https://chromewebstore.google.com/detail/iitc-button/febaefghpimpenpigafpolgljcfkeakn?hl=zh-tw</a><br />
-<img alt="" src="ref/img/image18.png" /></p></div></details>
+<img alt="" src="ref/img/image18.png" /></p></div></div>
 <h2 id="t-新手2"><span class="tag">新手#2</span> IITC - player tracker</h2>
 <details class="sec sec-toggle" data-key="新手#2:緣起" open><summary>緣起</summary><div class="sec-body"><p>小明：「甚麼叫做不出 log？這是甚麼意思？」<br />
 小黑：「遊戲裡玩家的行動有些會跳戰報，<strong>戰情</strong>會透過追蹤玩家戰報動向來猜測他的行為」<br />
@@ -122,9 +125,9 @@ table.progress td.num{font-weight:700}
 <img alt="" src="ref/img/image6.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>用你的足跡畫出指定圖<br />
 - 指定圖：繞著公園(一個小區域也行)一圈，沿路出 log，然後截 IITC 的圖</p></div></div>
-<details class="sec sec-toggle" data-key="新手#2:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>IITC 要啟用 Player Tracker 外掛，地圖上才會顯示足跡</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手3"><span class="tag">新手#3</span> 守護成就</h2>
 <details class="sec sec-toggle" data-key="新手#3:緣起" open><summary>緣起</summary><div class="sec-body"><p>在遊戲玩家間，流傳的一個古老的傳說。曾經只要佔領一座塔，守護他直到 20 天，就能達成金牌守護成就</p>
 <p>漫畫<strong>聖哥傳</strong>連載的第八十話中以 portal 守護為主題，來描述 ingress 遊戲的日常<br />
@@ -134,12 +137,12 @@ https://comic.acgn.cc/view-215393.htm<br />
 <img alt="" src="ref/img/image28.png" /></p>
 <p>努力守護你的塔吧! 藏塔藏起來! 不要被藍軍找到!</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>請截圖月數據中...最長持有塔的天數。20天以上即完成任務</p></div></div>
-<details class="sec sec-toggle" data-key="新手#3:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>owner 是你自己才算持有時間</li>
 <li>數據看月，大於等於 20 即可<br />
 <strong><img alt="" src="ref/img/image29.png" /></strong><br />
 <strong><img alt="" src="ref/img/image30.png" /></strong></li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手4"><span class="tag">新手#4</span> 解一個城市組圖</h2>
 <details class="sec sec-toggle" data-key="新手#4:緣起" open><summary>緣起</summary><div class="sec-body"><p>「這遊戲除了 key 可以收集之外，還有一種值得收藏的東西 - 就是組圖了!」</p>
 <p>所謂的組圖，是由一排排 6 的倍數遊戲任務所組成系列圖<br />
@@ -148,9 +151,9 @@ https://comic.acgn.cc/view-215393.htm<br />
 要解出一張漂亮完整的組圖，需要按照順序一個一個來解，在解任務的過程中，本身就是深度旅行的一種形式。例如著名的國聖燈塔組圖，就是從台南火車站，一路往七股國聖燈塔的旅程</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>完成任意一組組圖任務 (6張任務)。截圖遊戲組圖畫面<br />
 <img alt="" src="ref/img/image20.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="新手#4:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>挑選起點離你近、路線短的組圖，比較容易一次解完</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手5"><span class="tag">新手#5</span> 戰神第一步 - 爆破</h2>
 <details class="sec sec-toggle" data-key="新手#5:緣起" open><summary>緣起</summary><div class="sec-body"><p>這是一個陣營對戰的遊戲，玩家的日常就是雙方互相爆破。<br />
 隨著防禦模組的使用，塔有軟有硬。而重盾防守搭配充電補血更是防守的標準流程。<br />
@@ -160,7 +163,7 @@ https://comic.acgn.cc/view-215393.htm<br />
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>戰神第一步，就是爆破一座<strong>高難度塔</strong>。<br />
 截圖爆破前塔 (portal) 的模組狀態，以及打白後的狀態</p>
 <p><strong>高難度塔</strong>：防禦值 150+ (塔防禦上限為 95%)，並且有三條以上的連線</p></div></div>
-<details class="sec sec-toggle" data-key="新手#5:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>舉例1：模組有四顆紫盾，理論防禦為 40*4 = 160，此時塔防禦為 95%</li>
 <li>
 <p>舉例2：模組有四顆綠盾，理論防禦為 30*4 = 120，此時塔防禦為 95%</p>
@@ -170,20 +173,20 @@ https://comic.acgn.cc/view-215393.htm<br />
 </li>
 <li><strong>連線防禦</strong>計算公式： (上限 70，金粽子可以加乘2倍以上的連線防禦)<br />
 <img alt="" src="ref/img/image21.png" /></li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手6"><span class="tag">新手#6</span> 農 key</h2>
 <details class="sec sec-toggle" data-key="新手#6:緣起" open><summary>緣起</summary><div class="sec-body"><p>「連線才是體現玩家技術的核心，沒有 key 就沒有連線」</p>
 <p>這是前輩教我的第一句話。入坑第一週，我的背包裡永遠缺 key，看著別人輕鬆拉線，自己只能站在塔下一次又一次地 Hack。後來才知道，農 key 也是有門道的。</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>任意一座塔，農到 10 把 key。截物品欄 Key 頁面（看得到塔名和 ×10）<br />
 截圖農塔前的 key 數量，農完之後的 key 數量</p></div></div>
-<details class="sec sec-toggle" data-key="新手#6:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>每座塔 4 小時內最多 Hack 4 次，每次冷卻 5 分鐘</li>
 <li>裝散熱可以縮短冷卻並重置過熱，裝蝴蝶可以增加 Hack 次數</li>
 <li>重複 Hack 只能拿到一把 key，先把 key 收進膠囊則可以再摸到新的一把</li>
 <li>長按 Hack，Glyph 介面中輸入「More key」，可以一次拿到 1~3 把 key。<br />
 <img alt="" src="ref/img/image22.png" /></li>
 <li>老手玩家會搭配點薯條物資加倍的方式，一次拿到雙倍的 key。</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手7"><span class="tag">新手#7</span> CF 蓋場</h2>
 <details class="sec sec-toggle" data-key="新手#7:緣起" open><summary>緣起</summary><div class="sec-body"><p>老師上課在講，三條線能圍成一個三角形<br />
 而在 ingress 遊戲中，三條線能圍出一片天空，也就是一個 CF。</p>
@@ -191,20 +194,20 @@ https://comic.acgn.cc/view-215393.htm<br />
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>建立一個 CF，範圍內包圍 5 座以上的藍塔</p>
 <p>(示意範例如下)<br />
 <img alt="" src="ref/img/image2.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="新手#7:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>先在 IITC 上規劃三個頂點，確認連線路徑不會被藍線擋住</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手8"><span class="tag">新手#8</span> linker 挑戰</h2>
 <details class="sec sec-toggle" data-key="新手#8:緣起" open><summary>緣起</summary><div class="sec-body"><p>玩家的馬桶 (常用塔) 每天都能產出大量的 key，所以常常成為區域內的關鍵點。<br />
 傳說中，真正的 linker 會把自家馬桶變成一座燈塔：十幾條線從它身上射向四面八方，打開 Intel Map 遠遠就能看見。<br />
 <img alt="" src="ref/img/image23.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>對一座塔建立 16 條連線，完成後截圖</p></div></div>
-<details class="sec sec-toggle" data-key="新手#8:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>每座塔只能對外噴 8 條線，想要噴更多就只能上金粽子 (SoftBank Ultra Link)，每一顆 +8 條上限</li>
 <li>對內的線則無上限</li>
 </ul>
 <p>例如 2016.03.05 台北綠軍發起的<a href="https://ingress.fandom.com/zh/wiki/228%E5%92%8C%E5%B9%B3%E9%B4%BF%E4%BB%BB%E5%8B%99?variant=zh-hans">和平鴿針包活動</a><br />
-<img alt="" src="ref/img/image24.png" /></p></div></details>
+<img alt="" src="ref/img/image24.png" /></p></div></div>
 <h2 id="t-新手9"><span class="tag">新手#9</span> 多重</h2>
 <details class="sec sec-toggle" data-key="新手#9:緣起" open><summary>緣起</summary><div class="sec-body"><p>「刷經驗最快的方法就是拉 CF，而多重則是一種噴一條線產出兩個 CF 的技巧」</p>
 <p>老探員刷 AP 從來不靠蠻力。他們會在地圖上排出一整串龍骨，每一條線噴出去，收穫兩個 CF。<br />
@@ -214,10 +217,10 @@ https://comic.acgn.cc/view-215393.htm<br />
 7 等以下的遊戲體驗很糟糕，可以善用刷多重的方式，讓等級快速回到 8 等以上</p>
 <p>前陣子神父重生，就使用刷多重技巧，花了四個小時就重新回到 16 等</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>建立一組 8 座龍骨的多重，截完成後的圖</p></div></div>
-<details class="sec sec-toggle" data-key="新手#9:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>訣竅 1: A 式多重。https://www.youtube.com/watch?v=fwmd_s0lstg</li>
 <li>訣竅 2: B 式多重。https://www.youtube.com/watch?v=TQjT8NocLtc</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-新手10"><span class="tag">新手#10</span> 開農團</h2>
 <details class="sec sec-toggle" data-key="新手#10:緣起" open><summary>緣起</summary><div class="sec-body"><p>「一座塔，Hack 幾次就過熱了，只能四小時才能重新摸。但只要裝上一套風扇加蝴蝶，它就會變成一口挖不完的井。」</p>
 <p><strong>風扇</strong>：減少 CD 時間<br />
@@ -225,13 +228,13 @@ https://comic.acgn.cc/view-215393.htm<br />
 <p>老手們會找一個圈五以上、七等 R農的區域，一群人在塔間畫圖摸物資。這就是農團，探員們最快大量取得物資的方法。</p>
 <p>「農團，對很多玩家來說，不僅僅只是取得物資，同時也是聊天交流的聚會時間」</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>開一場農團，截一張完成此任務的截圖</p></div></div>
-<details class="sec sec-toggle" data-key="新手#10:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>圈五以上 (圈：黃色圈圈就是摸得到的範圍，此時範圍內數量至少要 5 座)</li>
 <li>七等塔以上</li>
 <li>農莊為一套 R or VR 農 (一套 = 風扇 + 蝴蝶)(R 指的是紫色等級)</li>
 </ul>
 <p>Ex: 圈十<br />
-<img alt="" src="ref/img/image25.png" /></p></div></details>
+<img alt="" src="ref/img/image25.png" /></p></div></div>
 <h1>老手任務</h1>
 <h2 id="t-老手1"><span class="tag">老手#1</span> 記憶中的地點1</h2>
 <details class="sec sec-toggle" data-key="老手#1:緣起" open><summary>緣起</summary><div class="sec-body"><p>「還記得... 很久很久之前的世界碎片戰.......」</p>
@@ -247,29 +250,29 @@ https://comic.acgn.cc/view-215393.htm<br />
 <p>「想要我的財寶嗎？想要的話可以全部給你，去找吧！我把所有的財寶都藏在那裡了」(???)</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>跟這個畫面合照<br />
 <img alt="" src="ref/img/image9.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="老手#1:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>可以用 IITC 或 Intel Map 比對 portal 照片，找出拍攝地點</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-老手2"><span class="tag">老手#2</span> 記憶中的地點2</h2>
 <details class="sec sec-toggle" data-key="老手#2:緣起" open><summary>緣起</summary><div class="sec-body"><p>同 老手#1</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>跟這個畫面合照<br />
 <img alt="" src="ref/img/image10.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="老手#2:提示" open><summary>提示</summary><div class="sec-body"><p>同 老手#1</p></div></details>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><p>同 老手#1</p></div></div>
 <h2 id="t-老手3"><span class="tag">老手#3</span> 記憶中的地點3</h2>
 <details class="sec sec-toggle" data-key="老手#3:緣起" open><summary>緣起</summary><div class="sec-body"><p>同 老手#1</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>跟這個畫面合照<br />
 <img alt="" src="ref/img/image11.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="老手#3:提示" open><summary>提示</summary><div class="sec-body"><p>同 老手#1</p></div></details>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><p>同 老手#1</p></div></div>
 <h2 id="t-老手4"><span class="tag">老手#4</span> 記憶中的地點4</h2>
 <details class="sec sec-toggle" data-key="老手#4:緣起" open><summary>緣起</summary><div class="sec-body"><p>同 老手#1</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>跟這個畫面合照<br />
 <img alt="" src="ref/img/image12.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="老手#4:提示" open><summary>提示</summary><div class="sec-body"><p>同 老手#1</p></div></details>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><p>同 老手#1</p></div></div>
 <h2 id="t-老手5"><span class="tag">老手#5</span> 記憶中的地點5</h2>
 <details class="sec sec-toggle" data-key="老手#5:緣起" open><summary>緣起</summary><div class="sec-body"><p>同 老手#1</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>跟這個畫面合照 (展覽布幕可能會換)<br />
 <img alt="" src="ref/img/image13.png" /></p></div></div>
-<details class="sec sec-toggle" data-key="老手#5:提示" open><summary>提示</summary><div class="sec-body"><p>同 老手#1</p></div></details>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><p>同 老手#1</p></div></div>
 <h2 id="t-老手6"><span class="tag">老手#6</span> 解碼</h2>
 <details class="sec sec-toggle" data-key="老手#6:緣起" open><summary>緣起</summary><div class="sec-body"><p>Niantic 偶爾會把 Passcode 藏在影片、圖片或一串亂碼裡，只有解得開的人才領得到獎勵。</p>
 <p>例如... 這是先前的範例：<br />
@@ -279,9 +282,9 @@ https://comic.acgn.cc/view-215393.htm<br />
 <p>這一次，主辦也藏了一組密碼，等你來解。</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>將以下的密碼，還原成明碼字串<br />
 MjAyNjExRW5sVGFpY2h1bmdBY3Rpdml0eQ==</p></div></div>
-<details class="sec sec-toggle" data-key="老手#6:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>可以參考上方範例詳解的解題思路</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-老手7"><span class="tag">老手#7</span> 地繪</h2>
 <details class="sec sec-toggle" data-key="老手#7:緣起" open><summary>緣起</summary><div class="sec-body"><p>「Field Art 是探員寫在地圖上的字。」<br />
 有些探員連線不為 AP，也不為 CF，只為了讓整座城市在 Intel Map 上看見一個圖案。世界各地的探員都曾用線畫出巨大的標誌和文字，這次輪到你在台中留下簽名。</p>
@@ -293,9 +296,9 @@ MjAyNjExRW5sVGFpY2h1bmdBY3Rpdml0eQ==</p></div></div>
 官方也許是看到了這活動，過了不久，就把台南選為大戰地點，並且在 2026.05.28 這天舉行活動<br />
 <img alt="" src="ref/img/image16.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>用 link 繪製 <strong>ENL</strong> 的字樣，截完整圖形的畫面 (IITC / 遊戲畫面皆可)</p></div></div>
-<details class="sec sec-toggle" data-key="老手#7:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>IITC 有 draw tool 工具可以在地圖上畫圖。也能匯出、匯入來跟友軍交流</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-老手8"><span class="tag">老手#8</span> 戰神第二步 - 大包</h2>
 <details class="sec sec-toggle" data-key="老手#8:緣起" open><summary>緣起</summary><div class="sec-body"><p>「MU 成就牌。這是一個不好完成，但同時也是能最快完成的成就牌。」</p>
 <p>玩家成就牌中，其中有一項就是 MU 數，銀牌需要 100W，黑牌需要 400W。<br />
@@ -311,11 +314,11 @@ MjAyNjExRW5sVGFpY2h1bmdBY3Rpdml0eQ==</p></div></div>
 <img alt="" src="ref/img/image27.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>完成一個大型 CF  (MU &gt; 10000)，參與活動的所有玩家都能送件<br />
 截圖 log 跳出的 MU 數量 (遊戲log or IITC log 都可)</p></div></div>
-<details class="sec sec-toggle" data-key="老手#8:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>怎麼估計 CF 的 MU 量? 可以先包一個小範圍的 CF  大約 100 MU。接著放大這個範圍 100 倍就行了</li>
 <li>MU 計算方式基本上看區域的人口數量，城市多、山區少</li>
 <li>過程中往往會需要打掉擋線，藍線打掉藍塔即可。綠塔則是要毒藍斷線，要毒掉之前記得遊戲陣營頻友善告知塔主唷!</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-老手9"><span class="tag">老手#9</span> 戰神第三步 - 戰車團</h2>
 <details class="sec sec-toggle" data-key="老手#9:緣起" open><summary>緣起</summary><div class="sec-body"><p>A:「颱風天玩家好無聊喔，只能待在家裡」<br />
 B:「颱風天還能幹嘛? 當然在家裡早點洗洗睡阿!....」<br />
@@ -337,9 +340,9 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
 戰車司機這麼多，唯一推薦台灣爸，信賴可靠的台灣爸讓你早點回家，品質保證</p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>三人一車，出團去!<br />
 自拍車內三人、IITC 截圖一起行動的路線 log</p></div></div>
-<details class="sec sec-toggle" data-key="老手#9:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>路線 log 可以用 IITC 的 Player Tracker 查看（同新手#2）</li>
-</ul></div></details>
+</ul></div></div>
 <h2 id="t-老手10"><span class="tag">老手#10</span> 戰神第四步 - 車農團</h2>
 <details class="sec sec-toggle" data-key="老手#10:緣起" open><summary>緣起</summary><div class="sec-body"><p>農團，是陣營快速取得物資的方法，同時也是友軍們聚會聊天的活動<br />
 相反的，車農團就是避免對手陣營成功開完農團的反制舉動</p>
@@ -359,9 +362,9 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
 <img alt="" src="ref/img/image15.png" /></p></div></details>
 <div class="sec sec-task"><div class="sec-label">任務</div><div class="sec-body"><p>完成一次車農團行動<br />
 截圖行動前的農團畫面、接著截圖行動後的遊戲畫面</p></div></div>
-<details class="sec sec-toggle" data-key="老手#10:提示" open><summary>提示</summary><div class="sec-body"><ul>
+<div class="sec sec-hint"><div class="sec-label">提示</div><div class="sec-body"><ul>
 <li>圈五、七塔、R農以上的團，稱為農團</li>
-</ul></div></details>
+</ul></div></div>
 <h1>結語</h1>
 <p>遊戲的互動方式有很多種，<br />
 - 有的人喜歡成為戰神玩家<br />
@@ -396,6 +399,16 @@ B:「咳... 颱風天當然要開戰車團出去玩阿!  開綠八農團，接�
   });
   document.getElementById('expand').onclick=function(){secs.forEach(function(d){d.open=true;});};
   document.getElementById('collapse').onclick=function(){secs.forEach(function(d){d.open=false;});};
+
+  var hintBtn=document.getElementById('hints');
+  function hints(on){
+    document.body.classList.toggle('hide-hints',!on);
+    hintBtn.setAttribute('aria-pressed',on);
+    hintBtn.textContent=on?'提示：開':'提示：關';
+    set('hints',on);
+  }
+  hintBtn.onclick=function(){hints(document.body.classList.contains('hide-hints'));};
+  hints(get('hints',true));
 
   function show(tab){
     document.querySelectorAll('[data-tab]').forEach(function(b){b.setAttribute('aria-selected',b.dataset.tab===tab);});
